@@ -6,11 +6,11 @@ terraform {
 }
 
 provider "azurerm" {
- #  subscription_id = "393e3de3-0900-4b72-8f1b-fb3b1d6b97f1"
- #  client_id = "9b3a05bb-0a4d-4e75-ab44-bc0313cacfb7"
- #  client_secret = "oQS8Q~oa5utz1B~2Y6D.8HkOFy27WZ0m3c4jRaJf"
- #  tenant_id = "7349d3b2-951f-41be-877e-d8ccd9f3e73c"
-  # skip_provider_registration = true
+   subscription_id = "393e3de3-0900-4b72-8f1b-fb3b1d6b97f1"
+   client_id = $AZURE_CLIENT_ID
+   client_secret = $AZURE_CLIENT_SECRET
+   tenant_id = $AZURE_TENANT_ID
+   skip_provider_registration = true
    features {}
 }
 
