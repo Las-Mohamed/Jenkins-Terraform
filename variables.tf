@@ -1,22 +1,22 @@
-variable "client_id" {
+variable "clientid" {
   description = "Azure Client ID"
   type        = string
   sensitive   = true
 }
 
-variable "client_secret" {
+variable "clientsecret" {
   description = "Azure Client Service Principal Secret"
   type        = string
   sensitive   = true
 }
 
-variable "subscription_id" {
+variable "subscriptionid" {
   description = "Azure Subscription ID"
   type        = string
   sensitive   = true
 }
 
-variable "tenant_id" {
+variable "tenantid" {
   description = "Azure Tenant ID"
   type        = string
   sensitive   = true
