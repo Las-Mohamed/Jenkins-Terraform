@@ -1,19 +1,18 @@
-terraform {
-   required_version = ">= 0.12"
+ terraform {
+
+   required_version = ">=0.12"
+
    required_providers {
-      azurerm = ">3.0"
+     azurerm = {
+       source = "hashicorp/azurerm"
+       version = "~>2.0"
+     }
    }
-}
+ }
 
-provider "azurerm" {
-   subscription_id = var.subscriptionid
-   client_id = var.clientid
-   client_secret = var.clientsecret
-   tenant_id = var.tenantid
-   skip_provider_registration = true
+ provider "azurerm" {
    features {}
-}
-
+ }
 
  resource "azurerm_resource_group" "webserver" {
    name = "LAST-Jenkins-Terraformed"
