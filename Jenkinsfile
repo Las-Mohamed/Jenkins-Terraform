@@ -7,6 +7,7 @@ node{
         sh 'terraform init'
     }
     stage('terraform apply') {
+        sh 'terraform plan'
         sh 'terraform apply --auto-approve'
     }
 }
