@@ -7,7 +7,7 @@ node{
     sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
 }
     stage('Terraform init') {
-        sh 'terraform init'
+        sh 'terraform init -upgrade'
     }
     stage('terraform apply') {
         sh 'terraform apply --auto-approve'
