@@ -10,8 +10,7 @@ node{
             /*withCredentials([
                     azureServicePrincipal(credentialsId: 'f2d10700-72b4-4064-b1d8-1a4882c4f29f', AZURE_CLIENT_SECRET: 'TF_VAR_clientsecret', AZURE_CLIENT_ID: 'TF_VAR_clientid', AZURE_TENANT_ID: 'TF_VAR_tenantid', AZURE_SUBSCRIPTION_ID: 'TF_VAR_subscriptionid')
                 ])*/
-        azureCLI commands: [[exportVariablesString: '', script: '']], principalCredentialId: 'f2d10700-72b4-4064-b1d8-1a4882c4f29f'
-    }
+     }
     stage('terraform init') {     
             /*withCredentials([
                     azureServicePrincipal(credentialsId: 'f2d10700-72b4-4064-b1d8-1a4882c4f29f', AZURE_CLIENT_SECRET: 'TF_VAR_clientsecret', AZURE_CLIENT_ID: 'TF_VAR_clientid', AZURE_TENANT_ID: 'TF_VAR_tenantid', AZURE_SUBSCRIPTION_ID: 'TF_VAR_subscriptionid')
