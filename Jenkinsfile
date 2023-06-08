@@ -9,3 +9,4 @@ node{
     stage('terraform apply') {
         sh 'terraform apply --auto-approve'
     }
+}
