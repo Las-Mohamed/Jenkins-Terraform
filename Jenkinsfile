@@ -1,7 +1,9 @@
-node {
+pipeline {
+    agent any
     environment {
    MY_CRED = credentials('f2d10700-72b4-4064-b1d8-1a4882c4f29f')
 }
+    stages {
      stage('Clone') {
         checkout scm
     }
@@ -26,4 +28,5 @@ node {
     stage('terraform apply') {
         sh 'terraform apply -auto-approve'
     }
+   }
 }
