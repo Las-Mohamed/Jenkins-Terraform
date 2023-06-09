@@ -1,12 +1,15 @@
 node{
     agent any
     environment {
-        withCredentials([azureServicePrincipal('f2d10700-72b4-4064-b1d8-1a4882c4f29f')])
-    // some block
+   AZURE = credentials('f2d10700-72b4-4064-b1d8-1a4882c4f29f')
 }
-    stage('Clone') {
+     stage('Clone') {
         checkout scm
     }
+    stage('Credentials') {
+        sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
+    }
+  
    /* withCredentials([azureServicePrincipal('f2d10700-72b4-4064-b1d8-1a4882c4f29f')]) {
     sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
 }*/
