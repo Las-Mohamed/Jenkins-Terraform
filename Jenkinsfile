@@ -1,5 +1,4 @@
-pipeline {
-    agent any
+node {
     environment {
    AZURE = credentials('f2d10700-72b4-4064-b1d8-1a4882c4f29f')
 }
