@@ -24,7 +24,7 @@ provider "azurerm" {
   # client_id = $AZURE_CLIENT_ID
   # client_secret = $AZURE_CLIENT_SECRET
   # tenant_id = $AZURE_TENANT_ID
-  # skip_provider_registration = true
+   skip_provider_registration = true
    features {}
 }
 
