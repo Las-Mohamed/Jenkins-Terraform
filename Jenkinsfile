@@ -1,12 +1,12 @@
 node {
     environment {
-   AZURE = credentials('f2d10700-72b4-4064-b1d8-1a4882c4f29f')
+   MY_CRED = credentials('f2d10700-72b4-4064-b1d8-1a4882c4f29f')
 }
      stage('Clone') {
         checkout scm
     }
     stage('Credentials') {
-        sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
+        sh 'az login --service-principal -u $MY_CRED_CLIENT_ID -p $MY_CRED_CLIENT_SECRET -t $MY_CRED_TENANT_ID'
     }
   
    /* withCredentials([azureServicePrincipal('f2d10700-72b4-4064-b1d8-1a4882c4f29f')]) {
