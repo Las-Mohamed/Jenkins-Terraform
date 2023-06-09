@@ -1,7 +1,7 @@
 node{
     agent any
     environment {
-        withCredentials([azureServicePrincipal('f2d10700-72b4-4064-b1d8-1a4882c4f29f')]) {
+        withCredentials([azureServicePrincipal('f2d10700-72b4-4064-b1d8-1a4882c4f29f')])
     // some block
 }
     stage('Clone') {
